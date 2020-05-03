@@ -1,3 +1,11 @@
+
+### About My Change
+This buildpack, before my last change, worked only for web applications. The last change in `bin/compile` removes this restriction. Now, with this buildpack and a procfile with the following content at the root directory of the project, you could deploy a .NET Core 3.1 console app on Heroku.
+
+`
+worker: cd $HOME/heroku_output && ./MyProjectName
+`
+
 # Heroku .NET Core Buildpack
 
 
